@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --primary-color: #22254b;
+    --secondary-color: #373b69;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+header{
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+    border: 1px solid;
+}
+
+header > h1 {
+    color: #fff;
+}
+
+header > h1 > i{
+    color: #fff;
+}
+
+header > form {
+    display: flex;
+    align-items: center;
+}
+
+header > form > input{
+ background-color: transparent;
+ border: 2px solid var(--primary-color);
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  margin: auto;
+}
+header > form > button{
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+     border-radius: 50px;
+     font-family: inherit;
+     font-size: 1rem;
+     padding: 0.5rem 1rem;
+     color: #fff;
+     cursor: pointer;
+     margin: auto;
+   }
+   header > form > button:hover{
+    background-color: var(--primary-color);
+    transition: .1s ease-in;
+   }
+
+   .result-container{
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    display: inline-block;
+    width: calc(33.33% - 20px); 
+    margin-right: 20px; 
+    vertical-align: top; 
+    position: relative;
+ 
+   }
+
+   .result-container > img{
+    max-width: 100%;
+    max-height: 90vh; 
+    width: 90vh;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    margin-bottom: 10px; 
+}
+
+.result-container > .title{
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 10px;
+}
+
+   .result-container > .rating {
+    font-weight: normal;
+    font-size: 24px;
+    color: #fff;
+    margin-top: 10px;
+   }
+   .result-container > .more-info {
+    font-size: 24px;
+    font-weight: normal;
+    color: #ccc;
+    margin-top: 10px;
+    
+}
+
+
+
+@media(max-width:768px){
+
+    header{
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    header > form{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    header > form > input,
+    header > form > button {
+        margin: 0.5rem;
+    }
+
+    .result-container{
+        width: 70%;
+        margin: auto;
+    }
+}
